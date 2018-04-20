@@ -1,0 +1,126 @@
+{% extends 'layout.html' %} {% load static %} {% block content %}
+<div id="slider">
+    <div id="box"></div>
+    <button class="prev fa fa-chevron-left" onclick="prevImage()" id="button10"></button>
+    <button class="next fa fa-chevron-right" onclick="nextImage()" id="button11"></button>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+    $(window).on('scroll', function () {
+        if ($(window).scrollTop()) {
+            $('nav').addClass('black');
+        }
+        else {
+            $('nav').removeClass('black');
+        }
+    })
+    var slider_content = $('#box');
+    console.log(slider_content)
+    var image = [
+        "{% static 'mc/images/img.jpg' %}",
+        "{% static 'mc/images/img1.jpg' %}",
+        "{% static 'mc/images/img2.jpg' %}",
+        "{% static 'mc/images/img3.jpg' %}",
+        "{% static 'mc/images/img4.jpg' %}",
+        "{% static 'mc/images/img5.jpg' %}",
+        "{% static 'mc/images/img6.jpg' %}",
+        "{% static 'mc/images/img7.jpg' %}",
+    ];
+    var i = image.length;
+    function prevImage() {
+        if (i < image.length + 1 && i > 1) {
+            i = i - 1;
+        }
+        else {
+            i = image.length;
+        }
+        slider_content.html("<img src=" + image[i - 1] + ">");
+    }
+
+    function nextImage() {
+        if (i < image.length) {
+            i = i + 1;
+        }
+        else {
+            i = 1;
+        }
+        slider_content.html("<img src=" + image[i - 1] + ">");
+    }
+    slider_content.html("<img src=" + image[0] + ">");
+    setInterval(nextImage, 2000);       
+</script>
+<div id="sections">
+    <div>
+        <section id="serv">
+            <p>Primary Care:</p>
+        </section>
+        <section id="content">
+            <p>The Support You Need
+                <br> We are committed to keeping the Hialeah community healthy, and this service ensures we accomplish that.
+                Customized to your personal needs and provided by an experienced medical professional, our medical-home guarantees
+                the highest level of care throughout all of our services. Get in touch with us today to schedule an appointment,
+                or learn more about the care and services our medical-home offers:
+                <br> Team-based
+                <br> Patient Centered
+                <br> Coordinated Care
+                <br> Extended Access
+                <br>
+            </p>
+            <div>
+                <a href="{% url 'contact' %}">
+                    <button type="button" id="button1">Contact</button>
+                </a>
+            </div>
+        </section>
+    </div>
+    <div>
+        <section id="serv1">
+            <p>Immediate Care:</p>
+        </section>
+        <section id="content1">
+            <p>Putting Patients First
+                <br> Through this service and our many others, Carreras Medical Center provides the high quality, personalized
+                care you deserve, when you need it. With our experienced team and the best treatments available, you can
+                rest assured that your health is in the best of hands. Contact us with any questions or simply to learn more
+                about our services:
+                <br> Preventive Care
+                <br> Chronic Care Management
+                <br> Women's Health
+                <br> Mental Health Counseling
+                <br> Allergy Testing
+                <br> Immunizations
+                <br> Blood Work
+                <br> Ultrasounds
+                <br>
+            </p>
+            <div>
+                <a href="{% url 'contact' %}">
+                    <button type="button" id="button2">Contact</button>
+                </a>
+            </div>
+        </section>
+    </div>
+    <div>
+        <section id="serv2">
+            <p>Immunotherapy:</p>
+        </section>
+        <section id="content2">
+            <p>Comprehensive Care
+                <br> Since Carreras Medical Center opened, our patients have depended on us to provide this valuable service.
+                As a pillar of the medical options we offer, this service caters to people who are extremely allergic or
+                who cannot avoid specific allergens. To learn more or ask questions, simply reach out.
+                <br>
+            </p>
+            <div>
+                <a href="{% url 'contact' %}">
+                    <button type="button" id="button3">Contact</button>
+                </a>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div>
+    <img src="{% static 'mc/images/healthy.jpg' %}" alt="" id="health">
+</div>
+{% endblock %}

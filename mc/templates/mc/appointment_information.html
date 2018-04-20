@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+  <div id="">
+    <h1>{{model.name}}</h1>
+    <h2>{{ model.phone_number}}</h2>
+    <h3>{{ model.category }}</h3>
+    <h4>{{ model.doctor }}</h4>
+    <h5>{{ model.created}}</h5>
+  </div>
+
+  <div>
+    <a href="{% url 'update_appointment' pk=model.pk %}">
+    <button type="button" id="button22">Update</button>
+    </a>        
+    <form style="display:inline-block" method="POST" action="{% url 'delete_appointment' pk=model.pk %}">
+        {% csrf_token %}
+        <button id="button23">Delete</button>
+    </form>            
+</div> <br>
+<div>
+    <a href="{% url 'create_appointment' %}">
+    <button id="button24">Back to Appointment</button>
+</div>
+  
+{% endblock %}

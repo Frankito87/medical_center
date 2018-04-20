@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Family Doctor | Hialeah | Medical Center</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.css">
+    <link rel="stylesheet" href="{% static 'mc/site.css' %}">
+</head>
+<body>   
+    <div class="wrapper">
+            <nav>
+                <img src="{% static 'mc/images/logo.bmp' %}" alt="" id="logo">
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'services' %}">Services</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'create_appointment' %}">Appointment</a></li>
+                    {% if request.user.is_authenticated %}
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                    {% else %}
+                    <li><a class="active" href="{% url 'log_in' %}">Log In</a></li>
+                    {% endif %}
+
+                </ul>
+            </nav>                              
+    </div><br><br><br><br><br><br>    
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div> <br> <br> <br>
+    <footer>
+        &copy; Carreras Medical Center 2018 <br>
+    </footer> <br> 
+    <div id="links">
+        <a href="https://www.facebook.com" id="face">
+            Follow us on Facebook or 
+        </a>            
+        <a href="https://www.instagram.com" id="inst">
+            Instagram
+        </a> <br>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.js"></script>
+    {% block scripts %}
+    {% endblock %}
+    
+</body>
+</html>

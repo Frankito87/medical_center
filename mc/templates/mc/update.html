@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+    <div>
+        <br>
+            <form method="POST" action="" id="update_patient">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button id="button12">Update</button>
+            </form>
+    </div>
+{% endblock %}

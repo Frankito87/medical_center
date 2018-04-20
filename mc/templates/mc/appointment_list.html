@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}      
+<ul id="appointment_list">
+    <p>Appointments:</p>
+    {% for appo in appointments %}
+        <a href="{% url 'appointment_information' pk=appo.pk %}">
+            {{ appo.name }} <br>
+        </a>
+    {% empty %}
+    {% endfor %}
+</ul> 
+<div>
+    <a href="{% url 'create_appointment' %}">
+    <button id="button31">Back to Appointment</button>
+</div>
+{% endblock %}

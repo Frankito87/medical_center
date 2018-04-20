@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}      
+<ul id="patient_list">
+    <p>Patients:</p>
+    {% for patient in patients %}
+    <a href="{% url 'patient_information' pk=patient.pk %}">
+        {{ patient.first_name }}
+        {{ patient.last_name }}
+    </a>
+    {% empty %}
+    {% endfor %}
+</ul> 
+<div>
+    <a href="{% url 'create_patient' %}">
+    <button id="button32">Back to Patient</button>
+</div>
+{% endblock %}

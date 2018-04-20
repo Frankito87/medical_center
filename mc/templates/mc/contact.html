@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+<h1>Contact</h1>
+<form role="form" action="" method="post" id="contact">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" id="contact_form">Send</button>
+</form>
+{% endblock %}

@@ -1,0 +1,248 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Quicksand;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 10 px 100px;
+    box-sizing: border-box;
+    transition: .3s;
+}
+
+#nav.black {
+    background: rgba(0, 0, 0, 0.8);
+    height: 100px;
+    padding: 10px 100px;
+}
+
+nav #logo {
+    padding: 22px 20px;
+    height: 100px;
+    float: left;
+    font-size: 24px;
+    transition: .3s;
+}
+
+nav.black #logo {
+    color: red;
+}
+
+nav ul {
+    list-style: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    line-height: 80px;
+    color: #151515;
+    padding: 12px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+nav.black ul li a {
+    color:red ;
+}
+
+nav ul li a:focus {
+    outline: none;
+}
+
+nav ul li a.active {
+    background: #E2472F;
+    color: #fff;
+    border-radius: 6px;
+}
+
+/* #serv p {
+    margin: 30px;
+    font-family: fantasy;
+    font-size: 22px;   
+}
+
+#content {
+    font-family: Arial;
+    font-size: 18px;
+    text-align: justify;
+    margin: 20px;
+    line-height: 30px;
+    border: 3px solid transparent; 
+}
+
+#serv1 {
+    font-family: fantasy;
+    font-size: 22px;   
+}
+
+#content1 {
+    font-family: Arial;
+    font-size: 18px;
+    text-align: justify;
+    margin: 20px;
+    line-height: 30px;
+    border: 3px solid transparent; 
+}
+
+#serv2 {
+    font-family: fantasy;
+    font-size: 22px;
+}
+
+#content2 {
+    font-family: Arial;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 30px;
+    border: 1px solid transparent; 
+}
+
+#content3 {
+    font-family: Arial;
+    font-size: 18px;
+    text-align: justify;
+    margin: 25px;
+    line-height: 30px;
+    border: 3px solid red;
+    padding: 10px;
+} */
+
+#sections {
+    display: flex;
+    flex-direction: row;
+}
+
+#sections > div {
+    padding: 1rem;
+}
+
+#sections .header {
+    
+}
+
+#button1, #button2, #button3, #button4, #button20, #button22, #button23, #button24, #button21,
+#button5, #button6, #button7, #button30, #button31, #button33, #button32, #contact_form, #button42 {
+    background: #E2472F;
+    color: #fff;
+    border-radius: 6px;
+    font-family: Arial;
+    font-size: 16px;
+    margin: 10px;
+}
+
+.auth-buttons {
+    text-align: left;
+}
+
+#login, #button9, #button12 {
+    margin: 10px;
+    background: #E2472F;
+    color: #fff;
+    border-radius: 6px;
+    font-family: Arial;
+    font-size: 16px;        
+}
+
+#loginpage {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+#patient_information h4, h5, h6 {
+    font-family: 'Times New Roman';
+    font-size: 18px;    
+}
+
+#patient_list {
+    text-align: center;
+    margin: 10px;
+} 
+
+#adding_patient, #update_patient, #patient_information, #adding_appointment, #adding_treatment  {
+    margin: 30px;
+    text-align: left;
+    border: 3px solid red;
+    padding: 10px;
+    font-family: Arial;
+}
+
+#slide {
+    width: 100%;
+    height: 500px;
+}
+
+#slider {
+    width: 1000px;
+    height: 500px;
+    margin: 20px auto;
+    position: relative;
+    border: 10px solid white;
+    box-shadow: 0px 0px 5px 2px #ccc;
+}
+
+#button10, #button11 {
+    padding: 20px;
+    border: none;
+    background: #37F;
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 45%;
+    cursor: pointer;
+}
+
+.next {
+    border-radius: 0px 10px 10px 0px;
+    margin-left: 950px;
+}
+
+.prev {
+    border-radius: 0px 10px 10px 0px;
+}
+
+footer {
+    text-align: center;
+    font-family: cursive;
+    font-size: 16px;
+}
+
+#health {
+    width: 95%;
+    padding: 30px;    
+}
+
+#add {
+    background: #E2472F;
+    color: white;
+    border-radius: 6px;
+    font-family: Arial;
+    font-size: 16px;
+    margin: 10px;
+}
+
+#contact {
+    font-family: Arial;
+    font-size: 14px;
+}
+
+#links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 5px;
+    font-size: 12px;
+}

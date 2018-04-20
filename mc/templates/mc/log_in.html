@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %} <br>
+<p>
+    You can log in here! <br>
+</p>
+<form method="POST">
+    {% csrf_token %}
+    <table>
+       {{ form.as_table }}
+        <tr>
+           <td></td>
+           <td><input type="submit" name="submit" value="Log In" id="login"/></td>
+       </tr>
+    </table>
+</form>
+<div>
+    <a href="{% url 'register' %}">
+    <button id="button9">Register</button>
+</div>
+<div>
+    <img src="{% static 'mc/images/login_page.jpg' %}" alt="" id="login_page">
+</div>
+{% endblock %}

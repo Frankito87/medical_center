@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+  <div id="">
+    <h1>{{ model.treatment }}</h1>
+    <h2>{{ model.notes}}</h2>
+    <h3>{{ model.date }}</h3>
+    <h4>{{ model.appointment.name }}</h4>
+  </div>
+  <div>
+    <a href="{% url 'create_treatment' %}">
+    <button id="button7">Back to Treatment</button>
+    <a href="{% url 'treatment_list' %}">
+    <button id="button30">Go to Treatment List</button>
+  </div>  
+  <div>     
+    <form style="display:inline-block" method="POST" action="{% url 'delete_treatment' pk=model.pk %}">
+        {% csrf_token %}
+        <button id="button5">Delete</button>
+    </form>            
+  </div> <br>
+{% endblock %}

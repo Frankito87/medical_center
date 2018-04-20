@@ -1,0 +1,70 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %} <br>
+<section id="serv">
+    <p>Primary Care:</p>
+</section>
+<section id="content">
+    <p>The Support You Need <br>
+        We are committed to keeping the Hialeah community healthy, 
+        and this service ensures we accomplish that. 
+        Customized to your personal needs and provided by an experienced medical professional, 
+        our medical-home guarantees the highest level of care throughout all of our services. 
+        Get in touch with us today to schedule an appointment, 
+        or learn more about the care and services our medical-home offers: <br>
+                    
+        Team-based <br>
+        Patient Centered <br>
+        Coordinated Care <br>
+        Extended Access <br>
+    </p>
+    <div>
+        <a href="{% url 'contact' %}">
+            <button type="button" id="button1">Contact</button>
+        </a>
+    </div>
+</section>
+<section id="serv1">
+    <p>Immediate Care:</p>
+</section>
+<section id="content1">
+    <p>Putting Patients First <br>
+    Through this service and our many others, Carreras Medical Center provides the high quality, 
+    personalized care you deserve, when you need it. 
+    With our experienced team and the best treatments available, 
+    you can rest assured that your health is in the best of hands. 
+    Contact us with any questions or simply to learn more about our services: <br>
+
+    Preventive Care <br>
+    Chronic Care Management <br>
+    Women's Health <br>
+    Mental Health Counseling <br>
+    Allergy Testing <br>
+    Immunizations <br>
+    Blood Work <br>
+    Ultrasounds <br>
+    </p>
+    <div>
+            <a href="{% url 'contact' %}">
+                <button type="button" id="button2">Contact</button>
+            </a>
+    </div>
+</section> 
+<section id="serv2">
+    <p>Immunotherapy:</p>
+</section>           
+<section id="content2">
+    <p>Comprehensive Care <br>
+    Since Carreras Medical Center opened, our patients have depended on us to provide this valuable 
+    service. As a pillar of the medical options we offer, 
+    this service caters to people who are extremely allergic or who cannot avoid specific allergens. 
+    To learn more or ask questions, simply reach out. <br>
+    </p>
+    <div>
+            <a href="{% url 'contact' %}">
+                <button type="button" id="button3">Contact</button>
+            </a>
+    </div>
+</section>
+
+{% endblock %}

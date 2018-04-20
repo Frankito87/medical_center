@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+    <div>
+        <form method="POST" action="{% url 'create_patient' %}" id="adding_patient">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button id=button6>Create</button>
+        </form>
+        <a href="{% url 'patient_list' %}">
+        <button id="button33">Go to Patient List</button>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    $('#id_created').datetimepicker()
+    $('#id_date_birth').datepicker()
+</script>
+{% endblock %}
